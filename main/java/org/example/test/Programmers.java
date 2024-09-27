@@ -1,11 +1,12 @@
 package org.example.test;
 
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Programmers {
     public static void main(String[] args) {
-        String a= "sadasd";
+        int[] array = {1,2,3,3,3,4};
 
+        for (int i = 0; i < array.length; i++) {
+
+        }
     }
 }
