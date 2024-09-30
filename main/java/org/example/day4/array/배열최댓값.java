@@ -19,5 +19,16 @@ public class 배열최댓값 {
         Arrays.sort(save); //오름차순 정렬, 맨앞 최솟값, 맨끝 최댓값
         System.out.println("최소값 : " + save[0]);
         System.out.println("최대값 : " + save[save.length - 1]); //save.length - 1
+
+        //해당 인덱스까지 최대값 넣는 변수 필요
+        int max = save[0];
+        //for문 순회
+        //if(max < save[i])이면, max = save[i]
+        for (int i = 0; i < save.length; i++) {
+            if (max < save[i]) {
+                max = save[i];
+            } //if
+        }//for
+        System.out.println(max);
     }
 }
