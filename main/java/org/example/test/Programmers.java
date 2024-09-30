@@ -1,21 +1,26 @@
 package org.example.test;
 
 
+import java.util.Arrays;
 
 public class Programmers {
     public static void main(String[] args) {
-        int n = 144;
 
-        int answer = 0;
-
-        double sqrt = Math.sqrt(n);
-        if (sqrt == Math.floor(sqrt)) {
-            answer =  1; // 제곱수인 경우
-        } else {
-            answer =  2; // 제곱수가 아닌 경우
+        String a = "hello";
+        String b = "";
+        int num1 = 1,num2 =2;
+        for(int i = 0; i < a.length(); i++) {
+            if( i == num1){
+                b+=a.charAt(num2);
+                continue;
+            }else if( i == num2){
+                b+=a.charAt(num1);
+                continue;
+            }
+            b += a.charAt(i);
         }
 
-        System.out.println(Math.floor(sqrt));
 
+        System.out.println(b);
     }
 }
