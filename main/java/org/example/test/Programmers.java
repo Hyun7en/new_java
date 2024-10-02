@@ -1,21 +1,21 @@
 package org.example.test;
 
-
-import java.util.Arrays;
-import java.util.StringTokenizer;
-
 public class Programmers {
     public static void main(String[] args) {
+        int age = 23;
 
-        int k = 3;
-        int num = 13445;
-        int answer = -1;  // 값이 없을 경우를 대비해 -1로 초기화
-        String a = String.valueOf(k);  // k를 문자열로 변환
-        String a1 = String.valueOf(num);  // num을 문자열로 변환
+        String age1 = String.valueOf(age);
 
-        answer = a1.indexOf(a);
+        for(int i = 0; i < age1.length(); i++){
+            age1.charAt(i);
+        }
 
-        System.out.println(answer + 1);
+
+        int a = Character.getNumericValue('a');
+        int z = Character.getNumericValue('z');
+
+
+        System.out.println(a);
 
     }
 }
