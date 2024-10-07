@@ -50,17 +50,28 @@ public class 영화랭킹프로그래밍 {
                 updateMovieInfo(poster, checkInfo, imgPath, movie, currentIndex[0]);
             }
         });
+
         btnNext.addActionListener(e -> {
             if (currentIndex[0] < movie.length - 1) {
                 currentIndex[0]++;
                 updateMovieInfo(poster, checkInfo, imgPath, movie, currentIndex[0]);
             }
         });
-        btnInfo.addActionListener(e -> {
-                    JOptionPane.showInputDialog("정보를 확인하고 싶은 영화 번호를 선택하세요(1-5): ");
 
+        btnInfo.addActionListener(e -> {
+            String input = JOptionPane.showInputDialog("정보를 확인하고 싶은 영화 번호를 선택하세요(1-5): ");
+            try {
+                int selectedIndex = Integer.parseInt(input) - 1; // Convert input to 0-based index
+                if (selectedIndex >= 0 && selectedIndex < movie.length) {
+                    currentIndex[0] = selectedIndex;
+                    updateMovieInfo(poster, checkInfo, imgPath, movie, currentIndex[0]);
+                } else {
+                    JOptionPane.showMessageDialog(frame, "올바른 번호를 입력하세요 (1-5).", "잘못된 입력", JOptionPane.ERROR_MESSAGE);
+                }
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(frame, "숫자를 입력하세요.", "잘못된 입력", JOptionPane.ERROR_MESSAGE);
             }
-        );
+        });
 
         // 패널에 추가
         infoPanel.add(checkInfo, BorderLayout.CENTER);
