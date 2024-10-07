@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class 영화예매시스템 {
+    static int count = 0;
+    static String sum = "";
+
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setSize(560, 550);
@@ -30,9 +33,26 @@ public class 영화예매시스템 {
                     JOptionPane.showMessageDialog(frame, s+"번 예매됨.");
                     button.setEnabled(false);
                     button.setBackground(Color.red);
+                    //버튼 클릭하면 count++처리
+                    count++;
+                    sum += s + ", ";
                 }
             });
         }
+
+        //결제 버튼 추가
+        JButton button = new JButton();
+        button.setText("결제하기");
+        frame.add(button);
+
+        //결제 버튼 클릭시 결제금액 알려주기
+        button.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(frame,"결제금액은 " + count*10000 + "이고. \n예매 좌석은 " + sum + "입니다." );
+            }
+        });
         //맨 끝!
         frame.setVisible(true);
     }
