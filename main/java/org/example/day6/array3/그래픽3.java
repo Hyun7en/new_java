@@ -44,32 +44,41 @@ public class 그래픽3 {
         JButton btnPrev = new JButton("<<");
         JButton btnNext = new JButton(">>");
 
+        // buttons and label deco
+        Font font = new Font("궁서",Font.BOLD,20);
+        btnPrev.setFont(font);
+        btnNext.setFont(font);
+        titleLabel.setFont(font);
+        priceLabel.setFont(font);
+
+        btnPrev.setBackground(Color.BLACK);
+        btnNext.setBackground(Color.BLACK);
+
+        frame.add(btnPrev, BorderLayout.WEST);
+        frame.add(btnNext, BorderLayout.EAST);
+
         // Action listeners for buttons
         btnPrev.addActionListener(e -> {
             if (currentIndex[0] > 0) {
-                currentIndex[0]--; // 인덱스를 감소
+                currentIndex[0]--; // 인덱스 감소
                 updateLabels(titleLabel, priceLabel, imageLabel, titles, prices, imgPaths, currentIndex[0]);
             }
         });
 
         btnNext.addActionListener(e -> {
             if (currentIndex[0] < titles.length - 1) {
-                currentIndex[0]++; // 인덱스를 증가
+                currentIndex[0]++; // 인덱스 증가
                 updateLabels(titleLabel, priceLabel, imageLabel, titles, prices, imgPaths, currentIndex[0]);
             }
         });
-
-        frame.add(btnPrev, BorderLayout.WEST);
-        frame.add(btnNext, BorderLayout.EAST);
 
         // Final frame settings
         frame.setVisible(true);
     }
 
-    // Method to update labels based on current index
     private static void updateLabels(JLabel titleLabel, JLabel priceLabel, JLabel imageLabel, String[] titles, double[] prices, String[] imgPaths, int index) {
         titleLabel.setText(titles[index]);
-        priceLabel.setText(String.valueOf(prices[index]) + " 원");
+        priceLabel.setText(prices[index] + " 원");
         imageLabel.setIcon(new ImageIcon(imgPaths[index])); // 이미지 아이콘 업데이트
     }
 }
