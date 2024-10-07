@@ -1,4 +1,4 @@
-package org.example.day6.class1;
+package org.example.day6.new01_class;
 
 import java.util.ArrayList;
 import java.util.List;
