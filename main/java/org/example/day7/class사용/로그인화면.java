@@ -77,6 +77,7 @@ public class 로그인화면 {
                     if (id3.equals("root") && pw3.equals("1234")) {
                         //JOptionPane.showMessageDialog(frame, "로그인 성공!");
                         frame.setTitle("로그인 성공!");
+
                     } else {
                         //JOptionPane.showMessageDialog(frame, "로그인 실패!");
                         frame.setTitle("로그인 실패!");
