@@ -1,21 +1,15 @@
 package org.example.test;
 
+import java.util.Scanner;
+
 public class Programmers {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
 
-        int n = 3628800;
-        int answer = 0;
-
-        for(int i = 1 ; i <= 10; i++ ){
-            int a = i;
-            if((i *= i) <= n){
-                answer = a-1;
-            }
+        for(int i = 0 ; i < 2; i++){
+            System.out.println();
         }
-
-
-
-        System.out.println(answer);
 
         //end
     }
