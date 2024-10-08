@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class 일기쓰기화면 {
     public static void main(String[] args) {
@@ -62,6 +64,10 @@ public class 일기쓰기화면 {
         content2.setFont(font);
         save.setFont(font);
 
+        today2.setBackground(Color.PINK);
+        title2.setBackground(Color.PINK);
+        content2.setBackground(Color.PINK);
+        save.setBackground(Color.YELLOW);
 
         // 5. 파일에 일기 저장을 클릭하면
         //today2, title2, content2에 입력한
@@ -74,6 +80,21 @@ public class 일기쓰기화면 {
                 String title3 = title2.getText();
                 String content3 = content2.getText();
                 System.out.println(today3 + " " + title3 + " " + content3);
+
+                //파일을 만드는 부품
+                //가지고 온 데이터를 파일에 저장
+
+                //파일도 만들어주고, 스트림으로 데이터를 저장까지 해주는 기능을 부품!
+                try {
+                    FileWriter file = new FileWriter(today3 + ".txt");
+                    file.write(today3 + "\n");
+                    file.write(title3 + "\n");
+                    file.write(content3 + "\n");
+                    file.close();
+                    JOptionPane.showMessageDialog(frame, "파일 저장 성공");
+                } catch (IOException ex) {
+                    System.out.println("파일과 관련된 문제가 생김.");
+                }
             }
         });
         frame.setVisible(true);
