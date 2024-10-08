@@ -3,15 +3,20 @@ package org.example.test;
 public class Programmers {
     public static void main(String[] args) {
 
+        int n = 3628800;
         int answer = 0;
-        String[] a= {"p","o","s"};
-        String[] dic = {"sod", "eocd", "qixm", "adio", "soo"};
 
-        for(String dic1 : dic){
-            dic1.split("");
+        for(int i = 1 ; i <= 10; i++ ){
+            int a = i;
+            if((i *= i) <= n){
+                answer = a-1;
+            }
         }
 
+
+
         System.out.println(answer);
+
         //end
     }
 }
