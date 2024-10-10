@@ -19,8 +19,9 @@ public class 계산기2 {
         int[] num = {1,2,3};
         return num;
     }
-    public void call(){
+    public int call(){
         Date date = new Date();
         int month = date.getMonth() + 1;
+        return month;
     }
 }

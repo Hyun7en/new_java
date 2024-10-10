@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class 일기쓰기화면 {
-    public static void main(String[] args) {
+    public void open() {
         /*
         1. JFrame frame = new JFrame();
             frame.setSize(350, 700);
