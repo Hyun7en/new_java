@@ -7,9 +7,8 @@ import java.io.OutputStream;
 public class 출력스트림 {
     public static void main(String[] args) {
 
-        OutputStream out = null;
         try {
-            out = new FileOutputStream("C:/data/imsi2.txt");
+            OutputStream out = new FileOutputStream("C:/data/imsi2.txt");
 
             byte[] array = {10,20,30,40,50};
 
