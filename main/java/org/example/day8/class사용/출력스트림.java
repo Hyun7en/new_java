@@ -4,19 +4,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class 출력스트림1 {
+public class 출력스트림 {
     public static void main(String[] args) {
 
+        OutputStream out = null;
         try {
-            OutputStream out = new FileOutputStream("C:/data/imsi.txt");
+            out = new FileOutputStream("C:/data/imsi2.txt");
 
-            byte a = 10;
-            byte b = 20;
-            byte c = 30;
+            byte[] array = {10,20,30,40,50};
 
-            out.write(a);
-            out.write(b);
-            out.write(c);
+            out.write(array,0,3);
 
             out.flush();
             out.close();
@@ -24,5 +21,6 @@ public class 출력스트림1 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
 }
