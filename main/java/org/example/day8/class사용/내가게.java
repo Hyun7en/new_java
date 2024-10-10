@@ -12,5 +12,10 @@ public class 내가게 {
         //더해서 총합을 구하고 싶음.
         int total = cal.더하기(result1, result2);
         System.out.println("두 번 더한 총합은 " + total);
+
+        System.out.println(cal.더하기(300, 200));
+        // System.out.println(cal.빼기(300, 200));
+        // --> void인 경우, 바로 출력할 수도, 연산도 불가능!
+
     }
 }
