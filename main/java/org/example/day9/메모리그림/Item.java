@@ -1,8 +1,8 @@
-package org.example.day6.new01_class;
+package org.example.day9.메모리그림;
 
 public class Item {
-    private String name;
-    private double price;
+    String name;
+    double price;
 
     public String getName() {
         return name;

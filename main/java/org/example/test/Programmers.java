@@ -1,33 +1,24 @@
 package org.example.test;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Programmers {
     public static void main(String[] args) {
 
-        StringBuilder sb = new StringBuilder();
+        // 정규식을 미리 컴파일하여 Pattern 객체로 저장
+        Pattern pattern = Pattern.compile("\\d{3}-\\d{3}-\\d{4}");  // 예: 전화번호 형식
 
-        String a = "1a2b3c4d123Z";
-        int answer = 0 ;
-        for(int i = 0; i < a.length(); i++){
+        // 입력 문자열에 대해 패턴 매칭 수행
+        String input = "Phone number: 123-456-7890";
+        Matcher matcher = pattern.matcher(input);
 
-            char b = a.charAt(i);
-
-            if(Character.isDigit(b)){
-                sb.append(b);
-            }else{
-                if(!sb.isEmpty()){
-                    answer += Integer.parseInt(sb.toString());
-                    sb.setLength(0);
-                }
-            }
-
+        // 패턴과 일치하는 부분 찾기
+        if (matcher.find()) {
+            System.out.println("Match found: " + matcher.group());
+        } else {
+            System.out.println("No match found");
         }
-
-        if(!sb.isEmpty()){
-            answer += Integer.parseInt(sb.toString());
-        }
-
-
-        System.out.println(answer);
         //end
     }
 
