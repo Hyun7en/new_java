@@ -1,8 +1,8 @@
 package org.example.day9.메모리그림;
 
 public class Item {
-    String name;
-    double price;
+    public String name;
+    public double price;
 
     public String getName() {
         return name;
