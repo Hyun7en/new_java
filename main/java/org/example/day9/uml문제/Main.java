@@ -1,7 +1,5 @@
 package org.example.day9.uml문제;
 
-import org.example.day9.메모리그림.Item;
-
 import java.util.Scanner;
 
 public class Main {

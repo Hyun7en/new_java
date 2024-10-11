@@ -1,21 +1,15 @@
 package org.example.test;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Programmers {
     public static void main(String[] args) {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String before = "olleh";
-        String after = "hello";
-        int answer = 0;
 
-        String reversedBefore = new StringBuilder(before).reverse().toString();
 
-        if (reversedBefore.equals(after)) {
-            answer = 1;
-        } else {
-            answer =  0;
-        }
 
-        System.out.println(answer);
         //end
     }
 
