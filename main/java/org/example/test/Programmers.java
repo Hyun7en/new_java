@@ -1,16 +1,14 @@
 package org.example.test;
 
+import java.util.ArrayList;
+
 public class Programmers {
     public static void main(String[] args) {
-        String str = "Hello, World!";
+        ArrayList list = new ArrayList();
+        list.add(1);
+        list.remove(0);
 
-        // 문자열을 char 배열로 변환
-        char[] charArray = str.toCharArray();
-
-        // char 배열 출력
-        for (char c : charArray) {
-            System.out.println(c);
-        }
+        System.out.println(list);
 
         //end
     }
