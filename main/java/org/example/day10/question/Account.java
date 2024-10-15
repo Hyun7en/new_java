@@ -29,7 +29,7 @@ public class Account {
     }
 
     public static Account[] getAccounts() {
-        return accounts; // Getter method to return the accounts array
+        return accounts;
     }
 
     public static void findAccount(String accountNumber) {

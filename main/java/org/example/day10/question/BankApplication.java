@@ -20,11 +20,11 @@ public class BankApplication {
             int choice;
             try {
                 choice = sc.nextInt();
-                sc.nextLine(); // Consume the newline character
+                sc.nextLine();
             } catch (InputMismatchException e) {
                 System.out.println("잘못된 입력입니다. 숫자를 입력하세요.");
-                sc.nextLine(); // Clear the invalid input
-                continue; // Restart the loop
+                sc.nextLine();
+                continue;
             }
 
             switch (choice) {
@@ -35,20 +35,20 @@ public class BankApplication {
                     int balance;
                     try {
                         balance = sc.nextInt();
-                        sc.nextLine(); // Consume the newline character
+                        sc.nextLine();
                         Account.addAccount(accountNumber, name, balance);
                     } catch (InputMismatchException e) {
                         System.out.println("잔액은 숫자로 입력해야 합니다.");
-                        sc.nextLine(); // Clear the invalid input
+                        sc.nextLine();
                     }
                     break;
                 case 2:
-                    Account[] accounts = Account.getAccounts(); // Get accounts using the getter method
-                    boolean hasAccounts = false; // Flag to check if there are any accounts
+                    Account[] accounts = Account.getAccounts();
+                    boolean hasAccounts = false;
                     for (Account account : accounts) {
                         if (account != null) {
                             System.out.println(account);
-                            hasAccounts = true; // At least one account exists
+                            hasAccounts = true;
                         }
                     }
                     if (!hasAccounts) {
@@ -67,8 +67,8 @@ public class BankApplication {
                     break;
                 case 5:
                     System.out.println("프로그램을 종료합니다.");
-                    sc.close(); // Close the scanner resource
-                    return; // Exit the program
+                    sc.close();
+                    return;
                 default:
                     System.out.println("잘못된 선택입니다. 다시 선택해주세요.");
                     break;

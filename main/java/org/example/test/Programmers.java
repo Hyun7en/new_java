@@ -1,36 +1,30 @@
 package org.example.test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Programmers {
+    public static void main(String args[]) {
+        int[] arr = {1, 2, 3, 4, 5};
 
-    public static void main(String args[]){
-        String myString = "xabcxdefxghi";
-        // "x"를 기준으로 문자열을 나누기
-        String[] parts = myString.split("x",-1);
+        // arr의 1번 인덱스부터 끝까지 복사
+        int[] arr2 = Arrays.copyOfRange(arr, 1, arr.length);
+        // arr의 0번 인덱스부터 1개만 복사
+        int[] arr3 = Arrays.copyOfRange(arr, 0, 1);
 
-        // 각 부분 문자열의 길이를 저장할 리스트
-        List<Integer> lengths = new ArrayList<>();
+        // answer 배열 초기화: arr2와 arr3의 길이를 더한 크기로
+        int[] answer = new int[arr2.length + arr3.length];
 
-        // 각 부분 문자열의 길이를 리스트에 추가
-        for (String part : parts) {
-            lengths.add(part.length());
+        // arr2의 요소를 answer에 추가
+        for (int i = 0; i < arr2.length; i++) {
+            answer[i] = arr2[i];
         }
 
-        // 리스트를 배열로 변환
-        int[] result = new int[lengths.size()];
-        for (int i = 0; i < lengths.size(); i++) {
-            result[i] = lengths.get(i);
+        // arr3의 요소를 answer에 추가
+        for (int i = 0; i < arr3.length; i++) {
+            answer[arr2.length + i] = arr3[i];
         }
 
-        System.out.println(Arrays.toString(result));
-
-
-
-
-        //end
+        // 결과 출력
+        System.out.println(Arrays.toString(answer));
     }
 }
-
