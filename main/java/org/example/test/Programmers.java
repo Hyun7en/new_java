@@ -1,15 +1,11 @@
 package org.example.test;
 
 public class Programmers {
-    static int a = 10;
     public static void main(String args[]) {
-        a =11;
-        Programmers.add();
-        Programmers.add();
+
+
+        System.out.println(7*4*4*9730*1.2);
+
     }
 
-    public static void add(){
-        a = a + 1;
-        System.out.println(a);
-    }
 }

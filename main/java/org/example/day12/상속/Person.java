@@ -4,6 +4,10 @@ public class Person {
     String name;
     char gender;
 
+    public Person(String name, char gender) {
+        this.name = name;
+        this.gender = gender;
+    }
 
     public void sleep(){
         System.out.println("잠을 잠.");
