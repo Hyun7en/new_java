@@ -1,7 +1,7 @@
 package org.example.day13.상속;
 
 public class 배열스레드 extends Thread{
-    String[] foods = {"a", "b", "c", "d", "e", "f"};
+    String[] foods = {"001.png", "002.png", "003.png"};
 
     public void run(){
         for (int i = 0; i < foods.length; i++) {
