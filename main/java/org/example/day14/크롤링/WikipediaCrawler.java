@@ -7,8 +7,9 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 public class WikipediaCrawler {
-    public static void main(String[] args) {
-        String url = "https://ko.wikipedia.org/wiki/2024%EB%85%84_8%EC%9B%94";
+
+    public static void crawl(int month) {
+        String url = "https://ko.wikipedia.org/wiki/2024%EB%85%84_" + month + "%EC%9B%94";
 
         try {
             Document document = Jsoup.connect(url).get();
@@ -28,18 +29,19 @@ public class WikipediaCrawler {
                 String date = dateElements.get(i).text();
                 String content = contentElements.size() > i ? contentElements.get(i).text() : "내용 없음"; // 내용이 없는 경우 처리
 
-
-                System.out.printf("날짜: %s%n", date);
-                if(!content.equals("")) {
+                if (!content.equals("")) {
+                    System.out.printf("날짜: %s%n", date.substring(18));
                     System.out.println("내용: " + content);
-                }else{
-                    System.out.println("내용: 금일자 화제의 내용은 없습니다.");
+                    System.out.println("-----------------------------------------");
+
                 }
-                System.out.println("-------------------------");
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+        //end
     }
 }
