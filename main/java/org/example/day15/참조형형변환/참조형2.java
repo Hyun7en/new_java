@@ -4,7 +4,7 @@ public class 참조형2 {
     public static void main(String[] args) {
         Car car = new Car();
         Truck truck = new Truck(); //Car(부모) <--- Truck(자식), Taxi(자식)
-        Person person = new Person(); //Car, Truck상관없음.
+        사람 person = new 사람(); //Car, Truck상관없음.
 
         car = truck; //부모클래스(개념적으로 크다.) <-- 자식클래스(개념적으로 작다.)
         //자동형변환
