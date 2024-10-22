@@ -1,35 +1,49 @@
 package org.example.day15.문제;
 
+
 import java.util.ArrayList;
 
-public class GenericStack<T> {
-    ArrayList<T> list;
+class GenericStack<T> {
+    private ArrayList<T> stack; // 스택을 위한 ArrayList
+    private int top; // 스택의 현재 크기
 
-    public T push(T t) {
-
-        return null;
+    public GenericStack() {
+        stack = new ArrayList<>();
+        top = 0;
     }
 
+    // 스택에 요소 추가
+    public void push(T item) {
+        stack.add(item);
+        top++;
+    }
+
+    // 스택에서 요소 제거 및 반환
     public T pop() {
-        return null;
-    }
-
-    public T peek() {
-        return null;
-    }
-
-    public boolean isEmpty(ArrayList<T> list) {
-        
-        if(list.isEmpty()){
-            return true;
+        if (isEmpty()) {
+            throw new RuntimeException("스택이 비어있습니다.");
         }
-
-        return false;
+        T item = stack.remove(--top);
+        return item;
     }
 
-    public void getList(){
-        System.out.println(list);
+    // 스택의 가장 위 요소를 반환
+    public T peek() {
+        if (isEmpty()) {
+            throw new RuntimeException("스택이 비어있습니다.");
+        }
+        return stack.get(top - 1);
     }
 
+    // 스택이 비어있는지 확인
+    public boolean isEmpty() {
+        return top == 0;
+    }
 
+    // 스택의 크기 반환
+    public int size() {
+        return top;
+    }
 }
+
+
