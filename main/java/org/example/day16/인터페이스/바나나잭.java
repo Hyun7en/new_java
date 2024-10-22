@@ -11,6 +11,6 @@ public class 바나나잭 implements 아이폰잭{
 
     @Override
     public void 이센치로만들다() {
-        System.out.println("2cm로 만들다.");
+        System.out.println("짧은 줄은 사용하여 2cm로 만들다.");
     }
 }
