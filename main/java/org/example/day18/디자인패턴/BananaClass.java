@@ -1,4 +1,4 @@
-package org.example.day18.확인문제;
+package org.example.day18.디자인패턴;
 
 public class BananaClass {
 
