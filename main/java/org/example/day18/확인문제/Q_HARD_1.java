@@ -9,5 +9,19 @@ public class Q_HARD_1 {
         총 3개의 주소를 비교해보시오.
         ● 클래스명 : DatabaseConnection, Main
          */
+        // DatabaseConnection 싱글톤 객체 생성
+        DatabaseConnection connection1 = DatabaseConnection.getInstance();
+        DatabaseConnection connection2 = DatabaseConnection.getInstance();
+        DatabaseConnection connection3 = DatabaseConnection.getInstance();
+
+        // 객체의 주소 비교
+        System.out.println("connection1 주소: " + connection1);
+        System.out.println("connection2 주소: " + connection2);
+        System.out.println("connection3 주소: " + connection3);
+
+        // 동일한 객체인지 비교
+        System.out.println("connection1 == connection2: " + (connection1 == connection2));
+        System.out.println("connection2 == connection3: " + (connection2 == connection3));
+        System.out.println("connection1 == connection3: " + (connection1 == connection3));
     }
 }
