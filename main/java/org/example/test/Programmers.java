@@ -1,16 +1,15 @@
 package org.example.test;
 
 
+import java.util.Arrays;
+
 public class Programmers {
     public static void main(String[] args) {
-        System.out.println("!@#$%^&*(\\'\"<>?:;");
-        System.out.println(" \"");
-        int[][] arr = {{1,2,3},{1,2,3}};
+        String[] answer = {};
+        String str = "axadsfcxsadsxxxzzd";
+        answer = str.split("x+");
 
-        System.out.println(arr.length);
-
-
-
+        System.out.println(Arrays.toString(answer));
         //end
     }
 
