@@ -1,4 +1,4 @@
-package org.example.day18.확인문제;
+package org.example.day19.디자인패턴;
 
 public class DatabaseConnection {
     // 1. DatabaseConnection 클래스의 유일한 인스턴스를 저장할 static 변수
