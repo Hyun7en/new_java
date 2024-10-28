@@ -70,6 +70,6 @@ public class 문제 {
         }
         System.out.println(answer);
 //        10. 피자 나눠 먹기(2)(p111)
-        
+
     }
 }
