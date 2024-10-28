@@ -1,4 +1,4 @@
-package org.example.day19.리플렉션;
+package org.example.day20.리플렉션;
 
 public class Person {
     private String name;
