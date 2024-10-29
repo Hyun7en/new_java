@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class 아이스아메리카노 {
     public static void main(String[] args) {
-        int money = 5500;
+        int money = 15000;
         Solution s = new Solution();
         int[] a = s.solution(money);
         System.out.println(Arrays.toString(a));

@@ -1,6 +1,6 @@
 package org.example.day21.알고리즘.선형;
 
-import java.util.Arrays;
+import org.example.ArrPrint;
 
 public class 배열뒤집기 {
     public static void main(String[] args) {
@@ -11,7 +11,8 @@ public class 배열뒤집기 {
         for (int i = 0; i < num_list.length; i++) {
             answer[i] = num_list[i];
         }
-        System.out.println(Arrays.toString(answer));
+        //System.out.println(Arrays.toString(answer));
+        ArrPrint.print(answer);
         //뒤집어서 옮겨보자.
         int[] answer2 = new int[num_list.length];
         //추가적인 j가 필요함.
@@ -22,6 +23,7 @@ public class 배열뒤집기 {
             answer2[j] = num_list[i];
             j--; //4,3,2,1,0
         }
-        System.out.println(Arrays.toString(answer2));
+        //System.out.println(Arrays.toString(answer2));
+        ArrPrint.print(answer2);
     }
 }
