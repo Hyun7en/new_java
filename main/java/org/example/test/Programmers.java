@@ -9,9 +9,6 @@ public class Programmers {
         String ineq = ">";
 
 
-
-
-
         //end
     }
 
