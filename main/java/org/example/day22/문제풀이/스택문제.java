@@ -1,5 +1,7 @@
 package org.example.day22.문제풀이;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 public class 스택문제 {
@@ -44,6 +46,7 @@ public class 스택문제 {
 //        밥을 더 많이 먹었으면 "밥을 더 먹었군요"
 //        커피를 더 많이 마셨으면 "커피를 더 마셨군요"
         String[] s2 = {"밥", "커피", "밥", "커피", "밥", "밥"};
+        Map map = new HashMap();
 
 
 
