@@ -13,7 +13,7 @@ public class Programmers {
         while(n > 0){
             answer[i++] = n%10;
             n = n/10;
-            
+
         }
 
         System.out.println(Arrays.toString(answer));
