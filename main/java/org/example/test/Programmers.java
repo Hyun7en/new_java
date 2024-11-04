@@ -16,7 +16,6 @@ public class Programmers {
 
         }
 
-        System.out.println(Arrays.toString(answer));
 
         //end
     }
