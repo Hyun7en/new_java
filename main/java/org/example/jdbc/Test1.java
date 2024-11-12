@@ -1,5 +1,6 @@
 package org.example.jdbc;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -15,9 +16,15 @@ public class Test1 {
         String pw = "1234";
         Connection con = DriverManager.getConnection(url,id,pw);
      //3. sql문 만들어서
-        PreparedStatement ps =  con.prepareStatement("insert into test values (2,2)");
+        String data1 = JOptionPane.showInputDialog("Enter your id");
+        String data2 = JOptionPane.showInputDialog("Enter your name");
+        PreparedStatement ps =  con.prepareStatement("insert into test values (?, ?)");
+
+     //1, 2번은 ?의 번호, 1번부터 시작!
+        ps.setString(1,data1);
+        ps.setString(2,data2);
      //4. mysql로 보내자
-        ps.executeUpdate();
+        ps.executeUpdate(); //네트워크로 mysql로 전송하는 개념!
      //5. sql실행은 mysql에서 함.
 
      //6. 결과를 자바에 보내주면 성공/ 실패 여부 판단 가능!
