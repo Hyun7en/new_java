@@ -26,10 +26,10 @@ public class DeptUpdate {
 
         sc.close();
 
-        String sql = "update dept2 set loc = ? and deptno = ?";
+        String sql = "update dept2 set loc = ? where deptno = ?";
         PreparedStatement ps = con.prepareStatement(sql);
-        ps.setInt(1,deptNo);
-        ps.setString(2,loc);
+        ps.setString(1,loc);
+        ps.setInt(2,deptNo);
         ps.executeUpdate();
         ps.close();
         con.close();
