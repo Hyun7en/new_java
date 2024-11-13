@@ -36,7 +36,7 @@ public class DB_test3 {
         ps.setString(1, id값);
         ps.setString(2, name값);
         System.out.println("3단계- sql문 객체화 성공!");
-        
+
         //4단계 - dbms로 sql문 전송
         int result = ps.executeUpdate(); //sql전송후 결과 받아온다.
         System.out.println("4단계- sql문 전송 성공!");

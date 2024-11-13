@@ -25,5 +25,6 @@ public class DB_test {
 
         //4단계 - dbms로 sql문 전송
         ps.executeUpdate();
+        con.close();
     }
 }
