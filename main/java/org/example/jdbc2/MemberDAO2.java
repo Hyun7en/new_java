@@ -4,10 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class MemberDAO {
+public class MemberDAO2 {
     private Connection con = null;
 
-    public MemberDAO() throws Exception {
+    public MemberDAO2() throws Exception {
         //new MemberDAO()할 때 클래스이름과 동일한 메서드인 생성자메서드가 자동호출됨.(1 - 2 단계를 실행해줌)
         //1. 드라이버 설정 --> 레이지로딩(실행시에 메모리에 올려줌)
 
@@ -23,7 +23,7 @@ public class MemberDAO {
 
 
     //삽입
-    public void insert(String id값, String pw값, String name값, String tel값) throws Exception {
+    public void insert(MemberVO vo) throws Exception {
 
         //3. sql준비 --> sql객체
 
@@ -32,10 +32,10 @@ public class MemberDAO {
         //insert into member values ('apple',...)
         //ps가 ?를 셋팅하는 역할!
         PreparedStatement ps = con.prepareStatement(sql);
-        ps.setString(1, id값); //1은 ?번호
-        ps.setString(2, pw값);
-        ps.setString(3, name값);
-        ps.setString(4, tel값);
+        ps.setString(1, vo.getId()); //1은 ?번호
+        ps.setString(2, vo.getPw());
+        ps.setString(3, vo.getName());
+        ps.setString(4, vo.getTel());
         System.out.println("3. sql준비 --> sql객체 성공!");
 
         //4. sql전송 --> ps가 전송하는 기능을 가지고 있음.
