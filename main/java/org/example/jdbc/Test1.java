@@ -1,4 +1,4 @@
-package org.example.jdbc3;
+package org.example.jdbc;
 
 import javax.swing.*;
 import java.sql.Connection;
