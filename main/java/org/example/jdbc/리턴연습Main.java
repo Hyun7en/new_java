@@ -1,7 +1,6 @@
-package org.example.jdbc;
+package org.example.jdbc3;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Date;
 
 public class 리턴연습Main {
