@@ -43,7 +43,7 @@ public class ProductDAO {
 
     public ArrayList<ProductVO> list() throws SQLException {
         ArrayList<ProductVO> list = null;
-
+        //good
         String sql = "select * from Product";
         PreparedStatement ps = con.prepareStatement(sql);
 
