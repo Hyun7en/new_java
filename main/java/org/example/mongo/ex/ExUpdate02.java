@@ -22,7 +22,6 @@ public class ExUpdate02 {
         Bson name = Updates.set("name","winner");
         Bson all = Updates.combine(pw,name);
 
-
         member.updateOne(filter,all);
         System.out.println(" === mongoDB로 전송함 === ");
         client.close();
