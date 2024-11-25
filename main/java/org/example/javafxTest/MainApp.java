@@ -14,7 +14,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) throws Exception {
         // fxml/testFX.fxml을 불러온다.
         Parent root = FXMLLoader.load(Objects.requireNonNull(
-                getClass().getClassLoader().getResource("fxml/readStock.fxml")
+                getClass().getClassLoader().getResource("fxml/loginUI.fxml")
         ));
 
         // GUI에 보일 프로그램 제목을 설정한다.

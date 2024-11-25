@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
+<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="fxml.loginUI"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #2e3552;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="312.0" layoutY="234.0" prefHeight="300.0" prefWidth="400.0">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="400.0" />
+            <Pane prefHeight="100.0" prefWidth="400.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="35.0" prefWidth="200.0" />
+                        <Pane prefHeight="30.0" prefWidth="200.0" />
+                        <Pane prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="200.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField text="rhqudgus99">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </TextField>
+                        <PasswordField text="himynameishyun99">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane prefHeight="100.0" prefWidth="400.0">
+               <children>
+                  <Button layoutY="39.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="400.0" text="로그인">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>

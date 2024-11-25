@@ -105,12 +105,38 @@ public class MemberUI2 extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //클릭했을 때 처리할 내용이 구현되어있어야함.
+                //1. 입력한 값 가지고 오기
+                String id = t1.getText();
+                String tel = t4.getText();
+                //2. dao에게 입력한 값 주면서 update해달라고 요청
+                try {
+                    MemberDAO2 dao = new MemberDAO2();
+                    dao.update(id, tel);
+                } catch (Exception ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
         b3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //클릭했을 때 처리할 내용이 구현되어있어야함.
+                //1. id입력한 값 가지고 온다.
+                String id = t1.getText();
+                //2. dao에게 id주면서 검색해달라고 요청
+                try {
+                    MemberDAO2 dao = new MemberDAO2();
+                    MemberVO bag = dao.one(id);
+                    t1.setText(bag.getId());
+                    t2.setText(bag.getPw());
+                    t3.setText(bag.getName());
+                    t4.setText(bag.getTel());
+                } catch (Exception ex) {
+                    throw new RuntimeException(ex);
+                }
+
+                //3. dao로부터 받아온 vo를 ui에 보여지게 하자.
+
             }
         });
 
