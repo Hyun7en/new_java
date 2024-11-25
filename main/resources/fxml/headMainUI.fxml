@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="768.0" prefWidth="1024.0">
+         <left>
+            <VBox prefHeight="700.0" prefWidth="200.0" style="-fx-background-color: #6F5CC2;" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="재고 조회" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0"  text="입고 등록" textFill="WHITE" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0"  text="출고 등록" textFill="WHITE" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0"  text="가맹점 정보 관리" textFill="WHITE" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0"  text="납품업체 정보 관리" textFill="WHITE" />
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox prefHeight="68.0" prefWidth="1024.0" style="-fx-background-color: #52438F;" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
