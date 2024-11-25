@@ -1,8 +1,5 @@
 package org.example.dbcp;
 
-import org.example.jdbc2.MemberDAO2;
-import org.example.jdbc2.MemberVO;
-
 import java.util.Scanner;
 
 public class MemberInsertUI2 {
@@ -19,14 +16,18 @@ public class MemberInsertUI2 {
         sc.close();
 
         //Member테이블에 연결해서 입력받은 데이터를 주고 insert해달라고 부르자.(호출하자.)
-        //MemberDAO클래스 사용해서 insert() 호출!
-        org.example.jdbc2.MemberDAO2 dao = new MemberDAO2();
+        //MemberDAO클래스 사용해서 insert()호출!
+        MemberDAO2 dao = new MemberDAO2();
         //가방만들기(new) -> 넣기(set) -> 전달
         MemberVO vo = new MemberVO();
         vo.setId(id값);
         vo.setPw(pw값);
         vo.setName(name값);
         vo.setTel(tel값);
-        dao.insert(vo);
+
+        for (int i = 0; i <100; i++) {
+            vo.setId(id값 + i);
+            dao.insert(vo);
+        }
     }
 }

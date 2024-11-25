@@ -1,9 +1,6 @@
 package org.example.dbcp;
 
-import org.example.jdbc2.MemberVO;
-
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class MemberDAO2 {
@@ -11,7 +8,7 @@ public class MemberDAO2 {
     DBConnectionMgr dbcp;
 
     public MemberDAO2() throws Exception {
-        //싱글톤을 생성된 DBCP객체 획득
+      //싱글톤을 생성된 DBCP객체 획득
         dbcp = DBConnectionMgr.getInstance();
     }
 
@@ -83,6 +80,6 @@ public class MemberDAO2 {
         System.out.println("4. sql전송 성공!");
         System.out.println("실행된 row수 --> " + result + "개");
 
-        dbcp.freeConnection(con, ps);
+        //dbcp.freeConnection(con, ps);
     }
 }
